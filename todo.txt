@@ -1,0 +1,9 @@
+[] refactor NavButton for dropdown using slots so we can do a custom dropdown (item)
+[] use that refacotr to make the search dropdown
+[] responsive navbar (basically make sidebar given lack of sidebar)
+[] add logos to NavButtons
+
+
+
+[] move this repo to asdf user so I can add it to parkerbedlan github
+    [] gitignore todo? or maybe a public todo and a secret todo2 idk, or have it all in notion!!!!
