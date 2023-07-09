@@ -2,16 +2,14 @@
 	export let label: string;
 	export let isSelected: boolean = false;
 	export let onClick: (() => void) | undefined = undefined;
-	export let customDisplay: boolean = false;
 </script>
 
-{#if customDisplay}
-	<slot name="customDisplay" {onClick} />
-{:else}
-	<button
-		class={`w-full px-4 py-1 text-left hover:bg-gray-500 active:scale-90 transition-all ${
+<button class="group w-full" on:click={onClick}>
+	<div
+		class={`min-w-[12rem] px-4 py-1 text-left transition-all group-hover:bg-gray-500 group-active:scale-90 ${
 			isSelected ? 'font-bold text-teal-300' : ''
 		}`}
-		on:click={onClick}>{label}</button
 	>
-{/if}
+		{label}
+	</div></button
+>

@@ -1,12 +1,13 @@
 <script lang="ts">
 	import ChevronDown from '../../lib/icons/ChevronDown.svelte';
 	import MagnifyingGlass from '../../lib/icons/MagnifyingGlass.svelte';
+	import DropdownItem from './DropdownItem.svelte';
 	import NavButton from './NavButton.svelte';
 
 	import type { ComponentProps } from 'svelte';
 
 	const labels = ['Home', 'Apps', 'Account'] as const;
-	let selectedLabel: (typeof labels)[number] = 'Home';
+	let selectedLabel: (typeof labels)[number] = 'Apps';
 
 	let categories = ['Category 1', 'Category 2', 'Category 3'] as const;
 	let selectedCategory: (typeof categories)[number] | null = null;
@@ -21,25 +22,21 @@
 				on:click={() => (selectedLabel = navButtonLabel)}
 			/>
 		{/each}
-		<NavButton
-			label="Categories"
-			dropdownList={categories.map((category) => ({
-				label: category,
-				isSelected: category === selectedCategory,
-				onClick: () => {
-					selectedCategory = category;
-				}
-			}))}
-		/>
-		<!-- <NavButton>
-			<span slot="label">Categories</span>
-
-		</NavButton> -->
+		<NavButton isDropdown>
+			<div slot="label">Categories</div>
+			<div slot="dropdown" let:class_ class={class_}>
+				{#each categories as category}
+					<DropdownItem
+						label={category}
+						isSelected={selectedCategory === category}
+						onClick={() => (selectedCategory = category)}
+					/>
+				{/each}
+			</div>
+		</NavButton>
 	</div>
-	<NavButton let:dropdownClass={dropdownClass}>
-		<MagnifyingGlass slot="label" strokeWidth="3" class="w-6 h-6 mx-3" />
-		<!-- <div slot="dropdown" class={dropdownClass}>
-			hi
-		</div> -->
+	<NavButton isDropdown>
+		<MagnifyingGlass slot="label" strokeWidth="3" />
+		<div slot="dropdown" let:class_ class={class_}>hi</div>
 	</NavButton>
 </nav>

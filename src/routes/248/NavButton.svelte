@@ -6,41 +6,45 @@
 
 	export let label: string | undefined = undefined;
 	export let isSelected: boolean = false;
-	export let dropdownList: ComponentProps<DropdownItem>[] | undefined = undefined;
+	export let isDropdown: boolean = false;
+
+	let dropdownClass =
+		'absolute -left-full -right-full top-full z-10 mx-auto flex w-48 animate-fade-in flex-col items-start rounded-lg bg-gray-600 py-2 text-gray-200 shadow-lg';
 </script>
 
 <div
 	class="relative z-0 flex h-full items-center text-gray-400"
 	use:clickOutside
 	on:clickOutside={() => {
-		if (dropdownList) isSelected = false;
+		if (isDropdown) isSelected = false;
 	}}
 >
 	<button
-		class={`flex h-full items-center gap-1 px-2 uppercase transition-all hover:bg-gray-800 hover:text-teal-300 active:scale-90 ${
-			isSelected ? 'border-b-4 border-teal-300 text-teal-300' : 'pb-1'
-		}`}
+		class="group h-full"
 		on:click={() => {
-			if (dropdownList) isSelected = !isSelected;
+			if (isDropdown) isSelected = !isSelected;
 		}}
 		on:click
 	>
-		{#if label}
-			{label}
-		{:else}
-			<slot name="label" />
-		{/if}
-		{#if dropdownList}
-			<ChevronDown class="w-4" strokeWidth="3" />
-		{/if}
-	</button>
-	{#if dropdownList && isSelected}
 		<div
-			class="absolute -left-full -right-full top-full z-10 mx-auto flex w-48 animate-fade-in flex-col items-start rounded-lg bg-gray-600 py-2 text-gray-200 shadow-lg"
+			class={`flex h-full items-center gap-1 px-2 uppercase transition-all group-hover:bg-gray-800 group-hover:text-teal-300 group-active:scale-90 ${
+				isSelected ? 'border-b-4 border-teal-300 text-teal-300' : 'pb-1'
+			}`}
 		>
-			{#each dropdownList as dropdownItem}
-				<DropdownItem {...dropdownItem} />
-			{/each}
+			{#if label}
+				{label}
+			{:else}
+				<slot name="label" />
+			{/if}
+			{#if isDropdown}
+				<ChevronDown class="w-4" strokeWidth="3" />
+			{/if}
 		</div>
+	</button>
+	{#if isDropdown && isSelected}
+		<slot
+			name="dropdown"
+			class_={'absolute -left-full -right-full top-full z-10 mx-auto flex w-fit animate-fade-in flex-col items-start rounded-lg bg-gray-600 py-2 text-gray-200 shadow-lg'}
+		/>
 	{/if}
 </div>
