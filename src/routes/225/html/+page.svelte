@@ -20,6 +20,7 @@
 				>
 			</div>
 			<div class="col-span-4 grid place-items-center p-1.5">
+				<!-- svelte-ignore a11y-autofocus -->
 				<input
 					type="text"
 					class="h-full w-full rounded-sm bg-white px-4 text-blue-900 outline-cyan-400 focus:outline focus:outline-1"
@@ -71,6 +72,7 @@
 				>
 			</div>
 			<div class="col-span-4 grid place-items-center p-1.5">
+				<!-- svelte-ignore a11y-autofocus -->
 				<input
 					type="text"
 					class="h-full w-full rounded-sm bg-white px-4 text-blue-900 outline-cyan-400 focus:outline focus:outline-1"
