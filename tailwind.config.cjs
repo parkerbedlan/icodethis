@@ -19,7 +19,8 @@ const config = {
 						opacity: 1
 					}
 				}
-			}, animation: {
+			},
+			animation: {
 				'fade-in': 'fade-in .4s 1'
 			}
 		}
