@@ -1,4 +1,6 @@
-[] refactor NavButton for dropdown using slots so we can do a custom dropdown (item)
+[] do the body
+
+[x] refactor NavButton for dropdown using slots so we can do a custom dropdown (item)
 [] use that refacotr to make the search dropdown
 [] responsive navbar (basically make sidebar given lack of sidebar)
 [] add logos to NavButtons
