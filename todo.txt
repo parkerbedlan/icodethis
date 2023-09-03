@@ -1,3 +1,6 @@
+[] make a lib components folder for reuse of stuff
+[] look at daisyui for stuff to copy
+
 [] do the body
 
 [x] refactor NavButton for dropdown using slots so we can do a custom dropdown (item)
