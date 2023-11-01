@@ -3,6 +3,7 @@
 </script>
 
 <!-- https://i.imgur.com/UwGFu8S.png -->
+<!-- https://9elements.github.io/fancy-border-radius/ -->
 
 <div
 	class="relative z-0 grid min-h-screen place-items-center overflow-hidden bg-[#202b47] text-white"

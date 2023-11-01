@@ -1,4 +1,5 @@
 <!-- https://i.imgur.com/3rL6bKU.png -->
+<!-- https://9elements.github.io/fancy-border-radius/ -->
 
 <script lang="ts">
 	import WindowDimensions from '../../lib/components/WindowDimensions.svelte';
@@ -9,7 +10,7 @@
 <div class="absolute inset-0 z-0 grid place-items-center bg-fuchsia-50">
 	<div class="flex flex-col gap-6">
 		<div
-			class="relative grid w-screen grid-cols-6 rounded-lg bg-white shadow-lg min-h-[8rem] [@media(min-width:28rem)]:h-32 [@media(min-width:28rem)]:w-[28rem]"
+			class="relative grid min-h-[8rem] w-screen grid-cols-6 rounded-lg bg-white shadow-lg [@media(min-width:28rem)]:h-32 [@media(min-width:28rem)]:w-[28rem]"
 		>
 			<button
 				class="absolute right-3 top-3 rounded-full bg-gray-100 p-1 hover:bg-gray-200 active:scale-90"
@@ -27,7 +28,9 @@
 				<h6 class="text-sm">You will receive an email to confirm your subscription.</h6>
 			</div>
 		</div>
-		<div class="relative grid w-screen grid-cols-6 rounded-lg bg-white shadow-lg min-h-[8rem] [@media(min-width:28rem)]:h-32 [@media(min-width:28rem)]:w-[28rem]">
+		<div
+			class="relative grid min-h-[8rem] w-screen grid-cols-6 rounded-lg bg-white shadow-lg [@media(min-width:28rem)]:h-32 [@media(min-width:28rem)]:w-[28rem]"
+		>
 			<button
 				class="absolute right-3 top-3 rounded-full bg-gray-100 p-1 hover:bg-gray-200 active:scale-90"
 				><XMark class="w-5" /></button

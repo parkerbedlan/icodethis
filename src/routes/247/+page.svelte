@@ -5,6 +5,7 @@
 </script>
 
 <!-- https://i.imgur.com/XjIBvkM.png -->
+<!-- https://9elements.github.io/fancy-border-radius/ -->
 
 <Body class="relative z-0 grid min-h-screen place-items-center bg-[#ffd148] min-[450px]:p-12" />
 
