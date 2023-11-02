@@ -6,14 +6,14 @@
 
 <div class="grid min-h-screen place-items-center bg-zinc-400 px-4 py-8">
 	<div
-		class="flex h-auto w-96 flex-col gap-3 bg-slate-700 px-7 py-6 text-white shadow-lg shadow-slate-600"
+		class="flex h-auto max-w-[24rem] flex-col gap-3 bg-slate-700 px-7 py-6 text-white shadow-lg shadow-slate-600"
 	>
 		<img src="https://placekitten.com/800" alt="" class="aspect-[4/3] object-cover object-center" />
 		<div>
 			<h1 class="text-lg font-bold uppercase">3 Myths Everyone Gets Wrong About Yoga</h1>
 			<div class="flex items-center justify-between">
 				<div class="text-slate-400">By Adrienne Brien</div>
-				<div class="scale-90 rounded-full bg-slate-800 px-2 py-1">16 April 2017</div>
+				<div class="scale-90 rounded-full bg-slate-800 px-2 py-1 text-center">16 April 2017</div>
 			</div>
 		</div>
 		<p class="pb-6 leading-snug">
@@ -23,7 +23,7 @@
 			experience.
 		</p>
 		<div
-			class="-mx-7 -mb-6 mt-auto flex h-20 items-center justify-between bg-slate-600 px-6 text-sm"
+			class="-mx-7 -mb-6 mt-auto flex h-20 flex-wrap items-center justify-between bg-slate-600 px-6 text-sm"
 		>
 			<div class="flex items-center">
 				<button
