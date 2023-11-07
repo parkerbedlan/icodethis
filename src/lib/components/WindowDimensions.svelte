@@ -5,4 +5,6 @@
 
 <svelte:window bind:innerWidth bind:innerHeight />
 
-<div class="absolute top-1 left-1 bg-gray-700 text-white py-1 px-2 rounded-full">{innerWidth} x {innerHeight}</div>
+<div class="absolute left-1 top-1 z-50 rounded-full bg-gray-700 px-2 py-1 text-white">
+	{innerWidth} x {innerHeight}
+</div>
