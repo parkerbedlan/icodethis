@@ -1,5 +1,5 @@
 <script>
-	import MagnifyingGlass from '../../../lib/icons/MagnifyingGlass.svelte';
+	import MagnifyingGlass from '../../lib/icons/MagnifyingGlass.svelte';
 </script>
 
 <button

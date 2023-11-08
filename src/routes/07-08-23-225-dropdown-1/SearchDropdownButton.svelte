@@ -1,6 +1,6 @@
 <script lang="ts">
-	import ChevronUp from '../../../lib/icons/ChevronUp.svelte';
-	import ChevronDown from '../../../lib/icons/ChevronDown.svelte';
+	import ChevronDown from '../../lib/icons/ChevronDown.svelte';
+	import ChevronUp from '../../lib/icons/ChevronUp.svelte';
 
 	export let isDropdownOpen: boolean;
 </script>

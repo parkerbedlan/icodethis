@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { stringify } from 'postcss';
 	import SearchButton from './SearchButton.svelte';
 	import SearchDropdown, { type Category } from './SearchDropdown.svelte';
 	import SearchDropdownButton from './SearchDropdownButton.svelte';
