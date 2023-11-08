@@ -1,12 +1,13 @@
 <script lang="ts">
 	let className = 'w-6 h-6';
 	let strokeWidth = '1.5';
-	export { className as class, strokeWidth };
+	let isFilled: boolean = false;
+	export { className as class, strokeWidth, isFilled };
 </script>
 
 <svg
 	xmlns="http://www.w3.org/2000/svg"
-	fill="none"
+	fill={isFilled ? 'currentColor' : 'none'}
 	viewBox="0 0 24 24"
 	stroke-width={strokeWidth}
 	stroke="currentColor"
