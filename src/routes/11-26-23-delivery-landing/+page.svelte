@@ -1,17 +1,72 @@
-<script>
+<script lang="ts">
 	import ChevronDown from 'lib/icons/ChevronDown.svelte';
 	import FaceSmile from 'lib/icons/FaceSmile.svelte';
 	import InformationCircle from 'lib/icons/InformationCircle.svelte';
+
+	const languages = ['EN', 'ES', 'FR'] as const;
+	type Language = (typeof languages)[number];
+	let language: Language = 'EN';
+
+	// TODO: ugh figure out how svelte does radios with bind
 </script>
 
 <div class="flex min-h-screen flex-col overflow-hidden bg-white">
 	<header
 		class="flex h-16 items-center justify-end gap-8 bg-slate-800 px-1 text-center text-gray-200 sm:px-6"
 	>
-		<button class="flex gap-1"
-			><div>EN</div>
-			<ChevronDown class="mt-1 w-4" /></button
-		>
+		<div class="dropdown">
+			<button class="flex gap-1"
+				><div>EN</div>
+				<ChevronDown class="mt-1 w-4" /></button
+			>
+			<ul class="dropdown-content menu rounded-box z-10 w-52 bg-slate-700 p-2 shadow">
+				<li>
+					<button
+						class="label relative flex w-full items-center justify-between hover:bg-slate-800"
+					>
+						<label class="absolute inset-0 cursor-pointer" for="lang-en" />
+						<div class="">{language}</div>
+						<input
+							id="lang-en"
+							type="radio"
+							name="radio-2"
+							class="radio bg-white"
+							checked={language === 'EN'}
+						/>
+					</button>
+				</li>
+				<li>
+					<button
+						class="label relative flex w-full items-center justify-between hover:bg-slate-800"
+					>
+						<label class="absolute inset-0 cursor-pointer" for="lang-es" />
+						<div class="">ES</div>
+						<input
+							id="lang-es"
+							type="radio"
+							name="radio-2"
+							class="radio bg-white"
+							checked={language === 'ES'}
+						/>
+					</button>
+				</li>
+				<li>
+					<button
+						class="label relative flex w-full items-center justify-between hover:bg-slate-800"
+					>
+						<label class="absolute inset-0 cursor-pointer" for="lang-fr" />
+						<div class="">FR</div>
+						<input
+							id="lang-fr"
+							type="radio"
+							name="radio-2"
+							class="radio bg-white"
+							checked={language === 'FR'}
+						/>
+					</button>
+				</li>
+			</ul>
+		</div>
 		<a href="/">Contact</a>
 		<a href="/">Log in</a>
 		<a href="/" class="rounded-sm bg-orange-600 px-6 py-2">Sign Up</a>
@@ -68,7 +123,6 @@
 
 <style>
 	.text-shadow {
-		/* text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5); */
 		text-shadow: 1px 1px 1px white;
 	}
 </style>
